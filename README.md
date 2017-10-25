@@ -37,10 +37,3 @@ Vit: #FFF
 Svart: #212121
 Filer
 
-Filerna ni skall använda er av hittar ni i det här Repository't.
-
-index.html : Projektets startfil.
-products.json : JSON fil som innehåller produkterna.
-script.js : Javascript startkod som läser in JSON filen.
-assets : Mapp som innehåller bilder på produkterna.
-mockups : Mapp som innehåller mockups på hur sidan skall se ut.
