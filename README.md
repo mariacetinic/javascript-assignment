@@ -33,5 +33,4 @@ TechStore's färger skall användas:
 - Grå: #F5F5F5
 - Vit: #FFF
 - Svart: #212121
-- Filer
 
