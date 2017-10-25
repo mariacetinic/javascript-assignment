@@ -14,11 +14,9 @@
 - [ ] När en produkt lägs till i kundvagnen skall detta reflekteras med att det visas en siffa intill kundvagnsknappen som reflekterar antalet produkter i kundvagnen.
 
 ###### Kundvagnssida (Väl Godkänt)
-- [ ]Startsidan skall lista produkterna som finns i products.json filen.
+- [ ]Startsidan skall lista produkterna som finns i products.json filen.test
 - [ ]Varje presentationsyta för produkterna skall ta upp ungefär hela höjden av skärmen och presentera all produktinformation.
 - [ ]Det skall även, för varje produkt, finnas en knapp för att lägga till produkterna i kundvagnen.
-
-
 - [ ]Kundvagnssidan skall lista produkterna som användaren har lagt till i kundvagnen.
 - [ ]Listan skall vara horizontell och centrerad.
 - [ ]Det ska gå att se flera produkter utan att behöva skrolla på sidan.
