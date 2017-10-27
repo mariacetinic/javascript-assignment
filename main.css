@@ -25,4 +25,5 @@ header{
     display: flex;
     justify-content: space-between;
     color: #fff;
+    position: fixed;
 }

@@ -3,7 +3,7 @@ var listOfProducts;
 // add more global variables when needed..
 
 /* Get products from the json file and store it in a javascript variable */
-fetch("./products.json")
+fetch("products.json")
 .then(function(response) {
     return response.json();
 })
@@ -14,6 +14,13 @@ fetch("./products.json")
 
 /** Uses the loaded products data to create a visible product list on the website */
 function createUIFromLoadedProducts() {
+    
+    //Hämtar diven med id:et main för att sedan kunna appenda
+    var mainContent = document.getElementById("main");
+
+    //skapar div med class där en produkt ska ligga.
+    var phoneItem = document.createElement("div");
+    phoneItem.className = "phoneItemClass";
     /* Check your console to see that the products are stored in the listOfProducts varible */
     console.log(listOfProducts);
 
