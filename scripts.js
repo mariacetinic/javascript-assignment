@@ -15,41 +15,51 @@ fetch("products.json")
 /** Uses the loaded products data to create a visible product list on the website */
 function createUIFromLoadedProducts() {
     
-    
 
     /* Check your console to see that the products are stored in the listOfProducts varible */
     console.log(listOfProducts);
 
-    /* Add your code here, remember to brake your code in to
-    smaller function blocks to reduce complexity and increase readability */
     //Hämtar diven med id:et main för att sedan kunna appenda
     var mainContent = document.getElementById("main");
 
     //skapar div med class där en produkt ska ligga.
     var phoneItem = document.createElement("div");
-    phoneItem.className = "phoneItemClass";
+    phoneItem.className = "phoneContainerClass";
 
    for (var index=0; index < listOfProducts.length; index++) {
       
-        console.log(listOfProducts[index].title);
+        //console.log(listOfProducts[index].title);
        //listOfProducts[index].title hämtar titlen från json filen
        // skriva ut titelarna i div.phoneItemClass
 
+       //En div till varje titel
         var phoneTitle = document.createElement("div");
-        phoneTitle.className = "phoneTitleClass";
+        phoneTitle.className = "phoneItemClass";
         
-       //detta skriver ut alla titlar i en phone item div med classen phoneItemClass!!! 
-       var getPhoneTitle = document.createTextNode(listOfProducts[index].title);
+       //Lägger in titlarna i en variabel
+       var getPhoneTitle = document.createElement("h1");
+       getPhoneTitle.innerText = listOfProducts[index].title;
        phoneTitle.appendChild(getPhoneTitle);
+
+       var getPhoneDescription = document.createElement("h5");
+       getPhoneDescription.innerHTML = (listOfProducts[index].description);
+       phoneTitle.appendChild(getPhoneDescription);
+
+       var getPhonePrice = document.createElement('p');
+       getPhonePrice.innerHTML = listOfProducts[index].price;
+       phoneTitle.appendChild(getPhonePrice);
+
+       //lägger till titlarna i form av text i var sin div
+       
+
+        // Lägger till alla divar med titlar i diven phoneItemClass
        phoneItem.appendChild(phoneTitle);
    }
 
 
     //Lägger till div.phoneItemclass till div.main
     mainContent.appendChild(phoneItem);
-    /* Each function must have an explainetory comment like the one for this function, see row 15 */
-    
-    /* Feel free to remove these other comments */
+
 }
 
 
