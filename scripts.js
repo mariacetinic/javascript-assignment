@@ -32,32 +32,9 @@ function createUIFromLoadedProducts() {
        //listOfProducts[index].title hämtar titlen från json filen
        // skriva ut titelarna i div.phoneItemClass
 
-       //En div till varje titel
-        var phoneItem = document.createElement("div");
-        phoneItem.className = "phoneItemClass";
-        
-       //Lägger in titlarna i en variabel
-       var getPhoneTitle = document.createElement("h1");
-       getPhoneTitle.innerText = listOfProducts[index].title;
-       phoneItem.appendChild(getPhoneTitle);
+       //hämtar funktionen med all data
+       var phoneItem = dataFromProducts(listOfProducts[index]);
 
-       var getPhoneDescription = document.createElement("h5");
-       getPhoneDescription.innerText = listOfProducts[index].description;
-       phoneItem.appendChild(getPhoneDescription);
-       
-       var getPhonePrice = document.createElement("p");
-       getPhonePrice.innerText = listOfProducts[index].price;
-       phoneItem.appendChild(getPhonePrice);
-
-       //lägger till titlarna i form av text i var sin div
-       var getPhoneImage = document.createElement("img");
-       getPhoneImage.src = "assets/" + listOfProducts[index].image;
-       phoneItem.appendChild(getPhoneImage);
-
-       //lägg till köpknapp
-       var buyButton = document.createElement("button");
-       buyButton.innerText = "Lägg till i kundvagnen";
-       phoneItem.appendChild(buyButton);
 
         // Lägger till alla divar med titlar i diven phoneItemClass
         phoneContainer.appendChild(phoneItem);
@@ -67,6 +44,37 @@ function createUIFromLoadedProducts() {
     //Lägger till div.phoneItemclass till div.main
     mainContent.appendChild(phoneContainer);
 
+}
+
+function dataFromProducts(listOfProducts) {
+       //En div till varje titel
+       var phoneItem = document.createElement("div");
+       phoneItem.className = "phoneItemClass";
+       
+      //Lägger in titlarna i en variabel
+      var getPhoneTitle = document.createElement("h1");
+      getPhoneTitle.innerText = listOfProducts.title;
+      phoneItem.appendChild(getPhoneTitle);
+
+      var getPhoneDescription = document.createElement("h5");
+      getPhoneDescription.innerText = listOfProducts.description;
+      phoneItem.appendChild(getPhoneDescription);
+      
+      var getPhonePrice = document.createElement("p");
+      getPhonePrice.innerText = listOfProducts.price;
+      phoneItem.appendChild(getPhonePrice);
+
+      //lägger till titlarna i form av text i var sin div
+      var getPhoneImage = document.createElement("img");
+      getPhoneImage.src = "assets/" + listOfProducts.image;
+      phoneItem.appendChild(getPhoneImage);
+
+      //lägg till köpknapp
+      var buyButton = document.createElement("button");
+      buyButton.innerText = "Lägg till i kundvagnen";
+      phoneItem.appendChild(buyButton);
+
+      return phoneItem; //sparar all data så jag kan återanvända
 }
 
 
