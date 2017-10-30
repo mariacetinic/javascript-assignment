@@ -78,8 +78,8 @@ function dataFromProducts(listOfProducts) {
       var buyButton = document.createElement("button");
       buyButton.id = "button";
       buyButton.onclick = function() { 
-        var amount = document.getElementById('amount');
-            amount.appendChild(phoneItem);
+        var amount = listOfProducts;
+            console.log(listOfProducts);
        };
       buyButton.innerText = "Lägg till i kundvagnen";
       phoneItem.appendChild(buyButton);
