@@ -42,16 +42,19 @@ function createUIFromLoadedProducts() {
        phoneTitle.appendChild(getPhoneTitle);
 
        var getPhoneDescription = document.createElement("h5");
-       getPhoneDescription.innerHTML = (listOfProducts[index].description);
+       getPhoneDescription.innerText = listOfProducts[index].description;
        phoneTitle.appendChild(getPhoneDescription);
 
-       var getPhonePrice = document.createElement('p');
-       getPhonePrice.innerHTML = listOfProducts[index].price;
+
+       
+       var getPhonePrice = document.createElement("p");
+       getPhonePrice.innerText = listOfProducts[index].price;
        phoneTitle.appendChild(getPhonePrice);
 
        //lägger till titlarna i form av text i var sin div
-       
-
+       var getPhoneImage = document.createElement("img");
+       getPhoneImage.src = "assets/" + listOfProducts[index].image;
+       phoneTitle.appendChild(getPhoneImage);
         // Lägger till alla divar med titlar i diven phoneItemClass
        phoneItem.appendChild(phoneTitle);
    }
