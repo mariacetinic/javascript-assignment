@@ -31,3 +31,11 @@ header{
 .phoneContainerClass{
     padding-top: 70px;
 }
+
+i {
+    color: white;
+}
+
+.phoneItemClass img{
+    width: 100%;
+}

@@ -60,6 +60,7 @@ function createUIFromLoadedProducts() {
        var buyButton = document.createElement("button");
        buyButton.innerText = "Lägg till i kundvagnen";
        phoneTitle.appendChild(buyButton);
+       
         // Lägger till alla divar med titlar i diven phoneItemClass
        phoneItem.appendChild(phoneTitle);
    }
