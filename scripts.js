@@ -35,12 +35,16 @@ function createUIFromLoadedProducts() {
        //listOfProducts[index].title hämtar titlen från json filen
        // skriva ut titelarna i div.phoneItemClass
 
-       //detta skriver ut alla titlar i en phone item div!!! YES!
+        var phoneTitle = document.createElement("div");
+        phoneTitle.className = "phoneTitleClass";
+        
+       //detta skriver ut alla titlar i en phone item div med classen phoneItemClass!!! 
        var getPhoneTitle = document.createTextNode(listOfProducts[index].title);
-       phoneItem.appendChild(getPhoneTitle);
+       phoneTitle.appendChild(getPhoneTitle);
+       phoneItem.appendChild(phoneTitle);
    }
 
-    
+
     //Lägger till div.phoneItemclass till div.main
     mainContent.appendChild(phoneItem);
     /* Each function must have an explainetory comment like the one for this function, see row 15 */
