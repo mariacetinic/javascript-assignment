@@ -76,16 +76,20 @@ function dataFromProducts(listOfProducts) {
 
       //lägg till köpknapp
       var buyButton = document.createElement("button");
+      buyButton.id = "button";
+      buyButton.onclick = function() { 
+        var amount = document.getElementById('amount');
+            amount.appendChild(phoneItem);
+       };
       buyButton.innerText = "Lägg till i kundvagnen";
       phoneItem.appendChild(buyButton);
 
       return phoneItem; //sparar all data så jag kan återanvända
-}
+
+    }
 
 
 
-var amountProducts = document.getElementById("amount");
-amountProducts.innerHTML = 0;
 
 /* Read the projects readme before you start! */
 /* Good luck and have fun 🤓 */
