@@ -32,14 +32,19 @@ function createUIFromLoadedProducts() {
        //listOfProducts[index].title hämtar titlen från json filen
        // skriva ut titelarna i div.phoneItemClass
 
-       //hämtar funktionen med all data
+       //hämtar funktionen dataFromProducts med all data
        var phoneItem = dataFromProducts(listOfProducts[index]);
 
 
         // Lägger till alla divar med titlar i diven phoneItemClass
         phoneContainer.appendChild(phoneItem);
+        
+        
+    //var testing = phoneItem
+    //testing.length;
+    //console.log('testing');
+   
    }
-
 
     //Lägger till div.phoneItemclass till div.main
     mainContent.appendChild(phoneContainer);
@@ -77,6 +82,10 @@ function dataFromProducts(listOfProducts) {
       return phoneItem; //sparar all data så jag kan återanvända
 }
 
+
+
+var amountProducts = document.getElementById("amount");
+amountProducts.innerHTML = 0;
 
 /* Read the projects readme before you start! */
 /* Good luck and have fun 🤓 */
