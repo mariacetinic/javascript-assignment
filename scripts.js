@@ -23,8 +23,8 @@ function createUIFromLoadedProducts() {
     var mainContent = document.getElementById("main");
 
     //skapar div med class där en produkt ska ligga.
-    var phoneItem = document.createElement("div");
-    phoneItem.className = "phoneContainerClass";
+    var phoneContainer = document.createElement("div");
+    phoneContainer.className = "phoneContainerClass";
 
    for (var index=0; index < listOfProducts.length; index++) {
       
@@ -33,41 +33,39 @@ function createUIFromLoadedProducts() {
        // skriva ut titelarna i div.phoneItemClass
 
        //En div till varje titel
-        var phoneTitle = document.createElement("div");
-        phoneTitle.className = "phoneItemClass";
+        var phoneItem = document.createElement("div");
+        phoneItem.className = "phoneItemClass";
         
        //Lägger in titlarna i en variabel
        var getPhoneTitle = document.createElement("h1");
        getPhoneTitle.innerText = listOfProducts[index].title;
-       phoneTitle.appendChild(getPhoneTitle);
+       phoneItem.appendChild(getPhoneTitle);
 
        var getPhoneDescription = document.createElement("h5");
        getPhoneDescription.innerText = listOfProducts[index].description;
-       phoneTitle.appendChild(getPhoneDescription);
-
-
+       phoneItem.appendChild(getPhoneDescription);
        
        var getPhonePrice = document.createElement("p");
        getPhonePrice.innerText = listOfProducts[index].price;
-       phoneTitle.appendChild(getPhonePrice);
+       phoneItem.appendChild(getPhonePrice);
 
        //lägger till titlarna i form av text i var sin div
        var getPhoneImage = document.createElement("img");
        getPhoneImage.src = "assets/" + listOfProducts[index].image;
-       phoneTitle.appendChild(getPhoneImage);
+       phoneItem.appendChild(getPhoneImage);
 
        //lägg till köpknapp
        var buyButton = document.createElement("button");
        buyButton.innerText = "Lägg till i kundvagnen";
-       phoneTitle.appendChild(buyButton);
-       
+       phoneItem.appendChild(buyButton);
+
         // Lägger till alla divar med titlar i diven phoneItemClass
-       phoneItem.appendChild(phoneTitle);
+        phoneContainer.appendChild(phoneItem);
    }
 
 
     //Lägger till div.phoneItemclass till div.main
-    mainContent.appendChild(phoneItem);
+    mainContent.appendChild(phoneContainer);
 
 }
 
